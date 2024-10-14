@@ -1,0 +1,15 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}Магазин{% endblock %}
+
+{% block content %}
+<h1>Магазин</h1>
+<ul>
+    {% for key, value in items.items %}
+    <li>{{ value }}
+        <button>Купить</button>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'home' %}">Назад на главную</a>
+{% endblock %}
